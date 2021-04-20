@@ -189,7 +189,7 @@ ul {
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero.jpg');
   background-color: var(--hero-footer-bg-color);
   color: var(--main-white-color);
 }
@@ -208,9 +208,8 @@ ul {
 }
 
 /* buttons */
-.button-one,
-.modal-form-btn {
-  padding: 10px 32px;
+.button-one {
+  padding: 10px 15px;
   border: none;
   border-radius: 4px;
 
@@ -228,10 +227,14 @@ ul {
 }
 
 .button-one:hover,
-.button-one:focus,
-.modal-form-btn:hover,
-.modal-form-btn:focus {
+.button-one:focus {
   background-color: #188ce8;
+}
+
+.footer-form-btn {
+  position: relative;
+  padding-right: 62px;
+  text-align: right;
 }
 
 .button-two {
@@ -558,7 +561,7 @@ ul {
 }
 
 .address-footer {
-  margin-right: 70px;
+  width: 270px;
 }
 
 .address-footer-list {
@@ -575,8 +578,13 @@ ul {
   margin-bottom: 9px;
 }
 
+.footer-contacts-container {
+  width: 270px;
+}
+
 .address-footer-contacts {
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-contacts-title {
@@ -612,6 +620,35 @@ ul {
   background-color: var(--third-text-color);
 }
 
+.footer-form-container {
+  /* margin-left: auto; */
+  width: 570px;
+}
+
+.footer-form-input {
+  width: calc(100% - 216px);
+  height: 50px;
+  padding-left: 16px;
+  margin-right: 12px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.footer-form-input::placeholder {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.icon-footer-form {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  fill: var(--main-white-color);
+  transform: translateY(-50%);
+}
+
 /* модальное окно героя */
 .backdrop {
   position: fixed;
@@ -645,7 +682,7 @@ ul {
 
   width: 528px;
   height: 581px;
-  padding: 40px;
+  padding: 35px 40px 45px 40px;
   border-radius: 4px;
   background-color: rgb(255, 255, 255);
   opacity: 1;
@@ -690,23 +727,49 @@ ul {
   margin-bottom: 12px;
 }
 
+.modal-form-text span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
 .modal-form-text input {
   height: 40px;
   width: 100%;
-  margin-top: 4px;
-  margin-bottom: 10px;
+
   padding: 0;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
 
-  /* display: flex;
-  flex-direction: column; */
+.modal-form-text div {
+  position: relative;
+}
+
+.modal-form-text svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.modal-form-label:focus-within svg {
+  fill: var(--third-text-color);
+}
+
+.modal-form-label:focus-within input {
+  outline: none;
+  border: 1px solid var(--third-text-color);
+}
+
+.modal-form-label:focus-within textarea {
+  outline: none;
+  border: 1px solid var(--third-text-color);
 }
 
 .modal-form-text textarea {
   width: 100%;
-  margin-top: 4px;
   margin-bottom: 20px;
   padding: 12px 16px;
   resize: none;
@@ -714,13 +777,53 @@ ul {
   border-radius: 4px;
 }
 
+.modal-form-text textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .modal-form-checkbox {
+  /* outline: 2px solid tomato; */
   margin-bottom: 30px;
 }
 
-.modal-form-conteiner-checkbox-bnt {
+.modal-form-link {
+  color: var(--third-text-color);
+}
+
+.modal-form-conteiner-checkbox-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* замена чексокса в форме */
+
+.hidden {
+  position: absolute;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.checkbox-off {
+  position: relative;
+  top: 2px;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.icon-checkbox:checked + .checkbox-off {
+  background-color: var(--third-text-color);
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+  background-origin: padding-box;
+  border: inherit;
 }
