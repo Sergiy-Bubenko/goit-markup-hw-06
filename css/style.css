@@ -734,11 +734,7 @@ ul {
   margin-bottom: 12px;
 }
 
-.modal-form-label {
-  position: relative;
-}
-
-.modal-form-text span {
+.modal-form-text-span {
   display: block;
   margin-top: 10px;
   margin-bottom: 4px;
