@@ -213,7 +213,6 @@ ul {
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
-
   min-width: 200px;
   font-family: Roboto, sans-serif;
   cursor: pointer;
@@ -626,7 +625,6 @@ ul {
 }
 
 .footer-form-container {
-  /* margin-left: auto; */
   width: 570px;
 }
 
@@ -659,10 +657,8 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-
   height: 100%;
   width: 100%;
-
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--animation);
@@ -734,6 +730,10 @@ ul {
   margin-bottom: 12px;
 }
 
+.modal-form-label {
+  position: relative;
+}
+
 .modal-form-text-span {
   display: block;
   margin-top: 10px;
@@ -748,10 +748,6 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border var(--animation);
-}
-
-.modal-form-text div {
-  position: relative;
 }
 
 .modal-form-icon {
@@ -797,7 +793,6 @@ ul {
 .modal-form-checkbox {
   margin-top: 20px;
   margin-bottom: 30px;
-  transition: color var(--animation) background-color var(--animation) border var(--animation);
 }
 
 .modal-form-link {
@@ -813,7 +808,7 @@ ul {
   justify-content: center;
 }
 
-/* замена чексокса в форме */
+/* замена чекбокса в форме */
 
 .hidden {
   position: absolute;
